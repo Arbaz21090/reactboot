@@ -76,7 +76,7 @@ function App() {
     </Carousel>
     
     <Container>
-    <Row>
+    <Row className='mt-3'>
     <Col>
     <p className='bg-info p-5 bg-gradient'>
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
