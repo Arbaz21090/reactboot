@@ -1,40 +1,116 @@
-* {
+body {
+  font-family: "Sofia", sans-serif;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none;
+}
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
- #strip {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding-top: 15px;
+ ::-webkit-scrollbar{
+display: none;
+}
+
+table {
+    font-family: arial, sans-serif;
+  border-collapse: collapse;
+    
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+border-collapse: collapse;
+    
+  }
+  
+
+  
+  .site-layout-content {
+    min-height: 280px;
+    padding: 24px;
+    background: #fff;
+  }
+  #components-layout-demo-top .logo {
+    float: left;
+    width: 120px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .ant-row-rtl #components-layout-demo-top .logo {
+    float: right;
+    margin: 16px 0 16px 24px;
+  }
+  #components-layout-demo-responsive .logo {
+    height: 32px;
+    margin: 16px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .site-layout-sub-header-background {
+    background: #fff;
+  }
+  
+  .site-layout-background {
+    background: #fff;
+  }
+  /* Social icon */
+ 
+  .icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  /* Style the icon bar links */
+  .icon-bar a {
+    display: block;
     text-align: center;
-    background: rgb(44,44,48);
-background: linear-gradient(90deg, rgba(44,44,48,1) 36%, rgba(156,156,164,1) 100%, rgba(0,212,255,1) 100%);
-} 
- #slider1{
-    z-index: -1;
-} 
-.nav-link{
-    position: relative;
-}
- .nav-link::after{
-content: '';
-width: 0%;
-height: 5px;
-background: #7F7FD5;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-position: absolute;
-bottom: 0%; left: 50%;
-border-radius: 10px;
-transition: all 500ms ease;
-
-}
-.nav-link:hover::after{
-left: 0%;
-width: 100%;
-}
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Style the social media icons with color, if you want */
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+  
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
+  @media only screen and (max-width: 768px) {
+  .icon-bar{
+    display: none;
+  }
+  }
