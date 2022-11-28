@@ -1,305 +1,358 @@
+// import React from 'react';
+// import './App.css';
+// import MaterialTable from "material-table";
+
+//   function App() {
+//     return (
+//     <div>
+//     <div style={{ maxWidth: '90%' }}>
+//     <MaterialTable
+//      columns={[
+//      { title: 'Adeu', field: 'name' },
+//      { title: 'Soyad', field: 'surname' },
+//      { title: 'Doğum Yulu', field: 'birthYear', 
+//      type: 'numeric' },
+//      { title: 'Doğum Yeri', field: 'birthCity', 
+//      lookup: { 34: 'İstanbul', 63: 'Şanluurfa' } }
+//       ]}
+//     data={[{ name: 'Mehmet', surname: 'Baran',birthYear: 1987,birthCity:63}]}
+//     title="Demo Title"
+//     />
+//     </div>
+//     </div>
+//     );
+//   }
+
+//   export default App;
+//*  import React from 'react';
+// import MaterialTable from 'material-table';
+
+
+//  function RefreshData() {
+//   const tableRef = React.createRef();
+  
+//   return (
+//     <MaterialTable        
+//       title="Refresh Data Preview"
+//       tableRef={tableRef}
+//       columns={[
+//         {
+//           title: 'Avatar',
+//           field: 'avatar',
+//           render: rowData => (
+//             <img
+//               style={{ height: 36, borderRAdeuus: '50%' }}
+//               src={rowData.avatar}
+//             />
+//           ),
+//         },
+//         { title: 'Id', field: 'id' },
+//         { title: 'First Name', field: 'first_name' },
+//         { title: 'Last Name', field: 'last_name' },
+//       ]}
+//       data={query =>
+//         new Promise((resolve, reject) => {
+//           let url = 'https://reqres.in/api/users?'
+//           url += 'per_page=' + query.pageSize
+//           url += '&page=' + (query.page + 1)
+//           fetch(url)
+//             .then(response => response.json())
+//             .then(result => {
+//               resolve({
+//                 data: result.data,
+//                 page: result.page - 1,
+//                 totalCount: result.total,
+//               })
+//             })
+//         })
+//       }
+//       actions={[
+//         {
+//           icon: 'refresh',
+//           tooltip: 'Refresh Data',
+//           isFreeAction: true,
+//           onClick: () => tableRef.current && tableRef.current.onQueryChange(),
+//         }
+//       ]}
+//     />
+//   )
+// }
+// export default RefreshData;
+// import React from 'react';
+// import Example from './Example';
+// import Recharts from './Recharts';
+// import Compo from './components/Compo';
+// import Icon from './Icon'
+// import TransferList from './TransferList';
+// import ImgComponent1 from './ImgComponent1';
+// import ImgComponent2 from './ImgComponent2';
+// import Component3 from './Component3';
+// import Card from './CardDesign';
+// import Color from './ColorDesign';
+// import DataGridDemo from './DataGridDemo';
+// import Avatar from './Avatar1';
+// import Badge from './Badge';
+// //  import StripedGrid1 from './StripedGrid';
+// // import CardDesign from './CardDesign';
+
+// function App() {
+//   return (
+ 
+//     <div>
+
+    /* <TransferList/> */
+  //  <Example/>
+
+      /* <Recharts/> */
+//  <ImgComponent1/>
+//  <ImgComponent1/>
+//   <Component3/>
+  /* <ImgComponent2/> */
+/* // <DataGridDemo/>
+// <Compo/>
+// <Icon/>
+
+// <Color/>
+// <Card/> 
+// <Avatar/>
+// <Badge/> */
+  /* <StripedGrid1/>  */
+     /* </div> */
+    
+/* //   );
+// } */
+
+// export default App;
+//import React from 'react';
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import { About } from './About';
+// import { Home } from './Home';
+// import { Services } from './Services';
+
+// function App(){
+//   return(
+//     <div>
+
+//       <BrowserRouter>
+//         <Routes>
+//           <Route path='/' element={<Home />} />
+//           <Route path='/about' element={<About />} />
+//           <Route path='/services' element={<Services />} />
+
+//         </Routes>
+//       </BrowserRouter>
+
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+
+// import React from 'react';
+// import './App.css';
+// import Table1 from './components/Table1';
+//   import  {useEffect,useState} from 'react';
+// import './components/style.css';
+
+//   function App() {
+   
+
+//       const [users,setUser]=useState([])
+//       useEffect(()=>{
+//         fetch("https://jsonplaceholder.typicode.com/photos")
+//         .then((result)=>{ result.json()
+//         .then((resp)=>{
+//             // console.warn(resp)
+//             setUser(resp)
+//           })
+//         })
+//       },[])
+    
+//       console.warn(users)
+    
+   
+    
+   
+//     return (
+//      <div>
+//    <Table1/>
+      
+//       <div className="App">
+//         <h1 className='bg-info text-light text-center'>Get API JSON todos </h1>
+//         <table border="1px silid black">
+//         <tbody>
+//         <tr>
+//             <td>User ID</td>
+//             <td>Description</td>
+//             <td>Title</td>
+//             <td>url</td>
+//            <td>thumbnailUrl</td>
+//           </tr>
+//           {
+//             users.map((item,i)=>
+//               <tr key={i}>
+//               <td>{item.albumId}</td>
+//             <td>{item.title}</td>
+//             <td>{item.id}</td>
+//             <td>{item.url}</td>
+//               <td>{item.thumbnailUrl}</td>
+//             </tr>
+//             )
+//           }
+//         </tbody>
+//         </table>
+//       </div> 
+//       </div>
+//      );
+//   }
+//   export default App;
+
+
+// import React from 'react';
+
+//   function App() {
+//     fetch('https://jsonplaceholder.typicode.com/comments')
+//   .then(response => response.json())
+//   .then(json => console.log(json))
+//     var data =[
+//       {
+//         id:1,name:"ui ux", address:"village Jhurak Jhundi post dheeraj Nagar"
+//       },
+//       {
+//         id:1,name:"react js", address:"viallge kheraj khushaplpur Tanda Rampur"
+//       },
+//       {
+//         id:1,name:"wordpress", address:"Delhi India Batla House"
+//       },
+//       {
+//         id:1,name:"php mysql", address:"Tanda Rampur and saidnagear"
+//       }
+//     ]
+//     return (
+//       <div>
+// {
+        
+//           data.map((data)=>(
+//             <div>
+//               {data.name}
+//               {data.id}
+//               {data.address}
+//             </div>
+//           ))
+        
+// }
+//       </div>
+//     );
+//   }
+
+//   export default App;
+
+  /* what all i have to install for react
+1. Node.js
+2. Simple react Snippet
+3. Simple functional snippet 
+4. Ant design snippet 
+5. Class autocomplete for html
+6. React js code snippets
+7. react Bootstrape4 snippets 
+8. Quokka.js
+9. prettier codeformatter
+10. Mui-snippets
+11. live server
+12. java script snippets pack
+13. intelligence for cs class name on HMtL 
+14. html Boiler plate. 
+15. ES7- React/Redux/React- native snippets
+16  . Babel js
+
+*/
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Alert from 'react-bootstrap/Alert';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar'
-import Carousel from 'react-bootstrap/Carousel';
-import image1 from './images/1.jpg';
-import image2 from './images/2.jpg';
-import image3 from './images/3.jpg';
-import banner from './images/banner.jpg';
-import card1 from './images/card1.jpg';
-import card2 from './images/card2.jpg';
-import card3 from './images/card3.jpg';
-import Counter from './components/counter';
-import Lable from './components/table';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import 'antd/dist/antd.css';
+
+// import 'antd/dist/antd.dark.less';
+import Slider from './components/Slider';
+import Car from './Car';
+import logo from './images1/logo.webp';
+import Profiles from './Profiles';
+import Profile from './Profile';
+import Cards from './Cards';
+import Antdesign from './Antdesign';
+import Cal from './Cal';
+import Sidebar from './Sidebar';
+import Social from './Social';
+import FormDetail from './FormDetail';
 import './components/style.css';
+import './components/script.js';
+import State from './State';
+import {About} from './About';
+// import MatTable1 from './MatTable1';
 
 
 function App() {
+
   return (
     <div>
-
-      
-        
-          <nav class="navbar navbar-expand-lg  bg-dark">
-            <div class="container">
-              <a class="navbar-brand text-white" href="#"><div class="text-xl font-extrabold ...">
-              <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-500">
-                GOOGLE
-              </span>
-            </div></a>
-              <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-        <i class="fas fa-bars fs-1 text-white"></i>
-                </span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav ms-auto">
-                  <a class="nav-link text-white " aria-current="page" href="#"><div class="text-sm font-extrabold ...">
-                  <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-500">
-                    HOME
-                  </span>
-                </div></a>
-                  <a class="nav-link text-white" href="#"><div class="text-sm font-extrabold ...">
-                  <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-500">
-                    ABOUT
-                  </span>
-                </div></a>
-                  <a class="nav-link text-white" href="#"><div class="text-sm font-extrabold ...">
-                  <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-500">
-                    CONTACT
-                  </span>
-                </div></a>
-                  <a class="nav-link text-white"><div class="text-sm font-extrabold ...">
-                  <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-yellow-500">
-                    SERVICES
-                  </span>
-                </div></a>
-                </div>
-              </div>
-            </div>
-          </nav>
-    
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src={logo} style={{width:'50px', height:'50px'}}></img></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto  mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><link to="/About">About</link></a>
+        </li>
        
-<div>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100" id='slider1'
-            src={image1}
-            alt="First slide"
-            style={{ height: '100vh' }} />
-          <Carousel.Caption style={{ color: 'black' }}>
-            <h3>SAMSUNG MOBILE</h3>
-            <p>This Mobile is Best for the Users</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100" id='slider1'
-            src={image2}
-            alt="First slide"
-            style={{ height: '100vh' }} />
-          <Carousel.Caption style={{ color: 'black' }}>
-            <h3>DELL LAPIE</h3>
-            <p>Dell is good lapie for the order</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100" id='slider1'
-            src={image3}
-            style={{ height: '100vh' }}
-            alt="Second slide" />
+        <li class="nav-item">
+          <a class="nav-link" href="/Sevices">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Portfolio</a>
+        </li>
+           
+        <li class="nav-item">
+          <a class="nav-link">Contact</a>
+        </li>
 
-          <Carousel.Caption style={{ color: 'white' }}>
-            <h3>BURGER</h3>
-            <p>|</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-
-      </Carousel>
-</div>
-      <div>
-        <Container>
-          <Row className='my-4'>
-            <Col sm={7}>
-              <img src={banner} class="img-fluid" alt="..." width={900} height={400}></img>
-            </Col>
-            <Col sm={5}>
-              <Card className='mt-2'>
-
-                <Card.Body>
-                  <Card.Title>
-                    <div class="text-xl font-extrabold ...">
-                      <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-                        Apple: "Think Different"
-                      </span>
-                    </div>
-                  </Card.Title>
-                  <Card.Text style={{ text: 'justify' }}>
-                    The quick brown fox jumps right over the lazy dog. The quick
-                    bronw fox jumps right over the lazy dog. The quick brown fox jumps
-                    The quick broewn fox jumps right over the lazy dog. The quick brown fox
-
-
-                  </Card.Text>
-                  <Button variant="primary">Call to Actor</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <div>
-        <Container>
-          <Row id='strip'>
-            <Col>
-              <p>The quick brown fox jumsps right over the lazy dog. The quick brown fox jumsp right over the lazy dog.</p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-      <div class='my-5'>
-        <Container>
-          <Row className='mx-3 g-5 justify-content-evenly'>
-            <Col>
-              <Card className='shadow-lg'>
-                <Card.Img variant="top" src={card2} />
-                <Card.Body>
-                  <Card.Title>
-                    <div class="text-2xl font-extrabold ...">
-                      <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-                        Development
-                      </span>
-                    </div>
-                  </Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col>
-              <Card className='shadow-lg'>
-                <Card.Img variant="top" src={card2} />
-                <Card.Body>
-                  <Card.Title><div class="text-2xl font-extrabold ...">
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-                      Health
-                    </span>
-                  </div></Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col>
-              <Card className='shadow-lg'>
-                <Card.Img variant="top" src={card3} />
-                <Card.Body>
-                  <Card.Title><div class="text-2xl font-extrabold ...">
-                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-                      Technical
-                    </span>
-                  </div></Card.Title>
-                  <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    <div className='bg-dark text-white d-grid text-center my-3 pt-4'>
-        <Container>
-          <Row>
-            <Col>
-              <p>Copyright &copy; Your Website 2021</p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
-    
-
+      </ul>
+     
     </div>
-
-    //   <div>
-    //     <div class="text-5xl font-extrabold ...">
-    //      <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-    //     Hello world! 
-    //  </span>
-    //  </div>
-    //      <Navbar bg="dark" variant="dark">
-    //      <Container>
-    //        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    //      <Nav className="ms-auto">
-    //          <Nav.Link href="#home"  className='text-white'>Home</Nav.Link>
-    //          <Nav.Link href="#features"  className='text-white'>Features</Nav.Link>
-    //          <Nav.Link href="#pricing"  className='text-white'>Pricing</Nav.Link>
-    //       </Nav>
-    //     </Container>
-    //        </Navbar>
+  </div>
+</nav>
 
 
-    //     <Container>
-    //     <Row className='mt-3'>
-    //     <Col>
-    //     <p className='bg-info p-5 bg-gradient'>
-    //     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    //     Lorem Ipsum has been the industry's standard dummy text ever since the
-    //     1500s, when an unknown printer took a galley of type and scrambled it to
-    //     make a type specimen book. It has survived not only five centuries, but
-    //     also the leap into electronic typesetting, remaining essentially
-    //     unchanged. It was popularised in the 1960s with the release of Letraset
-    //     sheets containing Lorem Ipsum passages, and more recently with desktop
-    //     publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    //     </p>
-    //     </Col>
-    //     <Col>
-    //     <p className='bg-primary p-5 bg-gradient'>
-    //     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    //     Lorem Ipsum has been the industry's standard dummy text ever since the
-    //     1500s, when an unknown printer took a galley of type and scrambled it to
-    //     make a type specimen book. It has survived not only five centuries, but
-    //     also the leap into electronic typesetting, remaining essentially
-    //     unchanged. It was popularised in the 1960s with the release of Letraset
-    //     sheets containing Lorem Ipsum passages, and more recently with desktop
-    //     publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    //     </p>
-    //     </Col>
-    //     </Row>
-    //     </Container>
-    //     <Container>
-    //     <Alert variant="danger">
-    //     <Alert.Heading>Hey, nice to see you</Alert.Heading>
-    //     <p>
-    //       Aww yeah, you successfully read this important alert message. This
-    //       example text is going to run a bit longer so that you can see how
-    //       spacing within an alert works with this kind of content.
-    //     </p>
-    //     </Alert>
-    //     </Container>
-    //     <Counter/>
-    //     <Lable/>
-    //     <Container>
-    //     <Row className='d-flex justify-content-center mb-4'>
-    //     <Col sm={4}>
-    //     <Form.Group controlId="formFile" className="mb-3">
-    //     <Form.Label>Default file input example</Form.Label>
-    //     <Form.Control type="file" className='bg-info' />
-    //   </Form.Group>
-    //   <Form.Select aria-label="Default select example">
-    //   <option>Open this select menu</option>
-    //   <option value="1">One</option>
-    //   <option value="2">Two</option>
-    //   <option value="3">Three</option>
-    // </Form.Select>
-    // <Form.Check 
-    // type="switch"
-    // id="custom-switch"
-    // label="Check this switch"
-    // />
-    //   </Col>
-    //   </Row>
-    //   </Container>
-    //     </div>
 
+
+{/* <MatTable1/> */}
+<Slider/>
+<Profiles/>
+<Car/>
+<Profile/>
+<Cards/>
+<Antdesign/>
+<Cal/>
+<Sidebar/>
+<Social/>
+<FormDetail/>
+<State/>
+{/* <MatTable/> */}
+ {/* <div>
+  
+    <Row className='bg-dark'>
+<h1>The Quick</h1>
+    </Row>
+  
+</div> */}
+    </div> 
   );
 }
 
 export default App;
+
+
